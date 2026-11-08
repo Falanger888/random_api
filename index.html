@@ -1,90 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Генератор кандидатов</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<style>
-        .div_form {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
- 
 
-        }
+    <main class="container">
+        <section class="profile-card">
+            <!-- Левая часть: Форма -->
+            <div class="form-column">
+                <form class="user-form">
+                    <div class="form-group">
+                        <label for="name">Имя и Фамилия</label>
+                        <input id="name" type="text" readonly placeholder="Загрузка...">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Пол</label>
+                        <input id="gender" type="text" readonly placeholder="Загрузка...">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <input id="email" type="email" readonly placeholder="Загрузка...">
+                    </div>
+                    <div class="form-group">
+                        <label for="birthday">День рождения</label>
+                        <input id="birthday" type="text" readonly placeholder="Загрузка...">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Адрес проживания</label>
+                        <input id="address" type="text" readonly placeholder="Загрузка...">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input id="phone" type="tel" readonly placeholder="Загрузка...">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input id="password" type="password" readonly placeholder="Загрузка...">
+                    </div>
+                </form>
+            </div>
 
-        .div_form>input {
-            width: 200px;
-            font-size: 16px;
-            border: none;
-            border-bottom: 2px solid black;
-            margin-top: 5px;
+            <!-- Правая часть: Аватар -->
+            <div class="avatar-column">
+                <h2>Аватар кандидата</h2>
+                <img id="img" class="avatar" src="https://via.placeholder.com/250" alt="Фотография кандидата">
+            </div>
+        </section>
 
-        }
-
-        label {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-
-        section {
-            display: flex;
-            justify-content: space-around;
-           border: 1px solid black;
-padding:50px;
-        }
-.avatar{
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-        }
-
- .button_new{
-            width: 300px;
-            height: 70px;
-            font-size: 32px;
-            text-align: center;
-            margin-top: 50px;
-            transition: 0.5s;
-cursor:pointer;
-        }
-        .button_new:hover{
-            scale: 1.1;
-            transition: 0.5s;
-
-        }
-    </style>
-    <section>
-        <div class="div_form">
-            <label for="name">Имя</label>
-            <input id="name" type="text">
-            <label for="poll">Пол</label>
-            <input id='poll' type="text">
-            <label for="email">Электронная почта</label>
-            <input id="email" type="text">
-            <label for="birthday">День рождения</label>
-            <input id="birthday" type="text">
-            <label for="adres">Адрес проживания</label>
-            <input id="adres" type="text">
-            <label for="phone">Номер телефона</label>
-            <input id="phone" type="text">
-            <label for="password">Пароль</label>
-            <input id="password" type="text">
+        <!-- Кнопка -->
+        <div class="button-wrapper">
+            <button id="fetchUser" class="button_new">Найти нового!</button>
         </div>
-        <div>
-<h2>Аватар кандидата</h2>
-            <img id="img" class='avatar' src="avatar.png" alt="Фотография">
-        </div>
-    </section>
-<center>
-<button id="fetchUser" class='button_new'>Найти нового!</button></center>
+    </main>
 
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

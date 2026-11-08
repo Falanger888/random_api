@@ -1,0 +1,150 @@
+/* Базовые настройки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Сетка карточки */
+.profile-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Левая колонка с формой */
+.form-column {
+    flex: 1;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Отступы между полями */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: #fafafa;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+/* Правая колонка с аватаром */
+.avatar-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 250px;
+}
+
+.avatar-column h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #444;
+}
+
+.avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 4px solid #fff;
+    background-color: #eee;
+}
+
+/* Кнопка */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.button_new {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.button_new:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.button_new:active {
+    transform: translateY(0);
+}
+
+.button_new:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column-reverse; /* Аватар будет сверху, форма снизу */
+        align-items: center;
+    }
+
+    .form-column {
+        width: 100%;
+    }
+
+    .avatar-column {
+        margin-bottom: 20px;
+    }
+}
